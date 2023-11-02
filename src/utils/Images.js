@@ -21,6 +21,9 @@ import product5 from "../assets/images/product5.png";
 import product6 from "../assets/images/product6.png";
 import product7 from "../assets/images/product7.png";
 import product8 from "../assets/images/product8.png";
+import product9 from "../assets/images/product9.png";
+import product10 from "../assets/images/product10.png";
+import product11 from "../assets/images/product11.png";
 
 export {
   heroBg,
@@ -46,4 +49,7 @@ export {
   product6,
   product7,
   product8,
+  product9,
+  product10,
+  product11,
 };

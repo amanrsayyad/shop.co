@@ -15,6 +15,9 @@ import checkIco from "../assets/icons/checkIco.png";
 import arrowLeft from "../assets/icons/arrowLeft.png";
 import arrowRight from "../assets/icons/arrowRight.png";
 import arrowRightShort from "../assets/icons/arrowRightShort.png";
+import filterIco from "../assets/icons/filterIco.png";
+import arrowUpShort from "../assets/icons/arrowUpShort.png";
+import arrowUpBottom from "../assets/icons/arrowUpBottom.png";
 
 export {
   cartIco,
@@ -33,5 +36,8 @@ export {
   checkIco,
   arrowLeft,
   arrowRight,
-  arrowRightShort
+  arrowRightShort,
+  filterIco,
+  arrowUpShort,
+  arrowUpBottom
 };
