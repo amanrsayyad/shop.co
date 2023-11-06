@@ -18,6 +18,11 @@ import arrowRightShort from "../assets/icons/arrowRightShort.png";
 import filterIco from "../assets/icons/filterIco.png";
 import arrowUpShort from "../assets/icons/arrowUpShort.png";
 import arrowUpBottom from "../assets/icons/arrowUpBottom.png";
+import Delete from "../assets/icons/delete.png";
+import plus from "../assets/icons/plus.png";
+import minus from "../assets/icons/minus.png";
+import label from "../assets/icons/label.png";
+import arrowRightBold from "../assets/icons/arrowRightBold.png";
 
 export {
   cartIco,
@@ -39,5 +44,10 @@ export {
   arrowRightShort,
   filterIco,
   arrowUpShort,
-  arrowUpBottom
+  arrowUpBottom,
+  Delete,
+  plus,
+  minus,
+  label,
+  arrowRightBold
 };

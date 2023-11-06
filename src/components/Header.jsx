@@ -45,7 +45,7 @@ const Header = () => {
         <Link to="#" className="icon search">
           <img src={searchIco} alt="" />
         </Link>
-        <Link to="#" className="icon">
+        <Link to="/cart" className="icon">
           <img src={cartIco} alt="" />
         </Link>
         <Link to="#" className="icon">

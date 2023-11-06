@@ -6,6 +6,7 @@ import OfferBar from "./components/OfferBar";
 import Footer from "./components/Footer";
 import Newsletter from "./components/Newsletter";
 import Shop from "./pages/Shop";
+import Cart from "./pages/Cart";
 
 function App() {
   const [offerBar, setOfferBar] = useState(true);
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
         <Newsletter />
         <Footer />
