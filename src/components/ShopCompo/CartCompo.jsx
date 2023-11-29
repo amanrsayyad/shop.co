@@ -3,14 +3,21 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { product2, product3, product9 } from "../../utils/Images";
 import { Delete, plus, minus, label, arrowRightBold } from "../../utils/Icon";
+import { useSelector } from "react-redux";
 
 const CartCompo = () => {
+
+  const { cart, totalQuantity, totalPrice } = useSelector(
+    (state) => state.allcart
+  );
+
   return (
     <CartContainer>
       <h1>Your cart</h1>
       <div className="grid">
         <div className="card">
           <div className="product_grid">
+          {cart.map((data) => (
             <div className="product_space">
               <img src={product9} alt="" />
               <div>
@@ -42,7 +49,8 @@ const CartCompo = () => {
                 </div>
               </div>
             </div>
-            <div className="product_space">
+          ))}
+            {/* <div className="product_space">
               <img src={product2} alt="" />
               <div>
                 <div className="product_item">
@@ -103,7 +111,7 @@ const CartCompo = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="card">

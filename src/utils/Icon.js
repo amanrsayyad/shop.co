@@ -23,6 +23,7 @@ import plus from "../assets/icons/plus.png";
 import minus from "../assets/icons/minus.png";
 import label from "../assets/icons/label.png";
 import arrowRightBold from "../assets/icons/arrowRightBold.png";
+import { FaCartShopping } from "react-icons/fa6";
 
 export {
   cartIco,
@@ -49,5 +50,6 @@ export {
   plus,
   minus,
   label,
-  arrowRightBold
+  arrowRightBold,
+  FaCartShopping
 };

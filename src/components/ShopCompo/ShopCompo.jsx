@@ -6,24 +6,17 @@ import {
   arrowUpShort,
   starFull,
   starHalf,
-  arrowUpBottom
+  arrowUpBottom,
+  FaCartShopping,
 } from "../../utils/Icon";
 import { Link } from "react-router-dom";
-import {
-  product1,
-  product2,
-  product3,
-  product4,
-  product5,
-  product6,
-  product7,
-  product8,
-  product9,
-  product10,
-  product11,
-} from "../../utils/Images";
+import { useSelector } from "react-redux";
+
 
 const ShopCompo = () => {
+
+  const items = useSelector((state)=> state.allcart.items)
+
   return (
     <ShopMain>
       <div className="border"></div>
@@ -117,146 +110,38 @@ const ShopCompo = () => {
             <div className="filter">
               <p>Showing 1-10 of 100 Products</p>
               <h4 className="flex_center">
-                <span>Sort by:</span>Most Popular <img src={arrowUpBottom} alt="" />
+                <span>Sort by:</span>Most Popular{" "}
+                <img src={arrowUpBottom} alt="" />
               </h4>
             </div>
           </div>
           <div className="grid">
+          {items.map((item) => (
             <Link to="#" className="card">
-              <img src={product9} alt="" />
-              <h4>Gradient Graphic T-shirt</h4>
-              <div className="star_container">
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starHalf} alt="" className="star_half" />
-                <p>
-                  <span>4.5/</span>5
-                </p>
+              <img src={item.img} alt="" />
+              <h4>{item.title}</h4>
+              <div className="detail_space">
+                <div>
+                  <div className="star_container">
+                    <img src={starFull} alt="" className="star_full" />
+                    <img src={starFull} alt="" className="star_full" />
+                    <img src={starFull} alt="" className="star_full" />
+                    <img src={starFull} alt="" className="star_full" />
+                    <img src={starHalf} alt="" className="star_half" />
+                    <p>
+                      <span>4.5/</span>5
+                    </p>
+                  </div>
+                  <h3>${item.price}</h3>
+                </div>
+                <div>
+                  <div className="cartBtn">
+                    <FaCartShopping className="cartIco" />
+                  </div>
+                </div>
               </div>
-              <h3>$145</h3>
             </Link>
-            <Link to="#" className="card">
-              <img src={product10} alt="" />
-              <h4>Polo with Tipping Details</h4>
-              <div className="star_container">
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starHalf} alt="" className="star_half" />
-                <p>
-                  <span>4.5/</span>5
-                </p>
-              </div>
-              <h3>$180</h3>
-            </Link>
-            <Link to="#" className="card">
-              <img src={product11} alt="" />
-              <h4>Black Striped T-shirt</h4>
-              <div className="star_container">
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starHalf} alt="" className="star_half" />
-                <p>
-                  <span>4.5/</span>5
-                </p>
-              </div>
-              <h3>$120</h3>
-            </Link>
-            <Link to="#" className="card">
-              <img src={product2} alt="" />
-              <h4>Skinny Fit Jeans</h4>
-              <div className="star_container">
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starHalf} alt="" className="star_half" />
-                <p>
-                  <span>4.5/</span>5
-                </p>
-              </div>
-              <h3>$240</h3>
-            </Link>
-            <Link to="#" className="card">
-              <img src={product3} alt="" />
-              <h4>Checkered Shirt</h4>
-              <div className="star_container">
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starHalf} alt="" className="star_half" />
-                <p>
-                  <span>4.5/</span>5
-                </p>
-              </div>
-              <h3>$180</h3>
-            </Link>
-            <Link to="#" className="card">
-              <img src={product4} alt="" />
-              <h4>Sleeve Striped T-Shirt</h4>
-              <div className="star_container">
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starHalf} alt="" className="star_half" />
-                <p>
-                  <span>4.5/</span>5
-                </p>
-              </div>
-              <h3>$130</h3>
-            </Link>
-            <Link to="#" className="card">
-              <img src={product5} alt="" />
-              <h4>Vertical Striped Shirt</h4>
-              <div className="star_container">
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starHalf} alt="" className="star_half" />
-                <p>
-                  <span>4.5/</span>5
-                </p>
-              </div>
-              <h3>$212</h3>
-            </Link>
-            <Link to="#" className="card">
-              <img src={product6} alt="" />
-              <h4>Courage Graphic T-Shirt</h4>
-              <div className="star_container">
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starHalf} alt="" className="star_half" />
-                <p>
-                  <span>4.5/</span>5
-                </p>
-              </div>
-              <h3>$145</h3>
-            </Link>
-            <Link to="#" className="card">
-              <img src={product7} alt="" />
-              <h4>T-Shirt with Tape Details</h4>
-              <div className="star_container">
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starFull} alt="" className="star_full" />
-                <img src={starHalf} alt="" className="star_half" />
-                <p>
-                  <span>4.5/</span>5
-                </p>
-              </div>
-              <h3>$80</h3>
-            </Link>
+            ))}
           </div>
           <div className="border_product"></div>
         </ProductContainer>
@@ -299,12 +184,19 @@ const ShopMain = styled.div`
       line-height: normal;
     }
   }
+  @media only screen and (max-width: 991px) {
+    padding: 0rem 1rem;
+  }
 `;
 
 const StoreGrid = styled.div`
   display: grid;
   grid-template-columns: 1.5fr 5fr;
   grid-gap: 1.5rem;
+
+  @media only screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const FilterSidebar = styled.div`
@@ -393,6 +285,10 @@ const FilterSidebar = styled.div`
     margin-top: 2rem;
     cursor: pointer;
   }
+
+  @media only screen and (max-width: 991px) {
+    display: none;
+  }
 `;
 
 const ProductContainer = styled.div`
@@ -442,6 +338,11 @@ const ProductContainer = styled.div`
 
       img {
         margin-left: 0.4rem;
+      }
+    }
+    @media only screen and (max-width: 991px) {
+      h4 {
+        display: none;
       }
     }
   }
@@ -509,12 +410,35 @@ const ProductContainer = styled.div`
           line-height: normal;
         }
       }
+      .detail_space {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+      .cartBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+        padding: 18px 23px;
+        border-radius: 7px;
+        margin-top: -22px;
+
+        .cartIco {
+          color: #fff;
+          font-size: 22px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: 1fr;
     }
   }
   .border_product {
     width: 100%;
     height: 1px;
-    background: rgba(0, 0, 0, 0.10);
+    background: rgba(0, 0, 0, 0.1);
     margin-top: 2rem;
   }
 `;
